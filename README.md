@@ -4,6 +4,10 @@ Uber-naive CommonJS->ES6 converter. **Will break on multi-line import/export dec
 
 This *rewrites files in place*, so back up your files/commit them before continuing.
 
+```
+cjs-convert path/to/file_one.js path/to/file_two.js
+```
+
 ### Supported syntax
 
 <table>
@@ -61,10 +65,13 @@ This *rewrites files in place*, so back up your files/commit them before continu
   </tr>
 </table>
 
-Will log a warning on a line like:
+### Unhandled syntax
+
+This converter will log a warning on a line like:
 
 ```
 var baz = require('foo').bar();
 ```
 
 since it can't rewrite anything beyond basic property access.
+
