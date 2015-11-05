@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true
+  },
+  "rules": {
+    // needed for eslint
+    "strict": 0,
+
+    // style stuff
+    "quotes": [2, "single"],
+    "no-underscore-dangle": [0],
+    "comma-dangle": 0,
+    "camelcase": 0,
+    "dot-notation": 0,
+
+    // functionality stuff
+    "new-cap": 0,
+    "no-shadow": 0,
+  },
+}
