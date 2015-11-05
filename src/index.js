@@ -1,12 +1,12 @@
 import {readFileSync, writeFileSync} from 'fs';
 
-const REQUIRE_RE = /var ([\d\w]+)\s*=\s*require\(([^)]+)\);?$/;
+const REQUIRE_RE = /^(?:var|let|const) ([\d\w]+)\s*=\s*require\(([^)]+)\);?$/;
 
 // ex:
 // require('foo').bar
-const REQUIRE_PROPERTY_RE = /var ([\d\w]+)\s*=\s*require\((.+)\)\.([^;]+);?$/;
+const REQUIRE_PROPERTY_RE = /^(?:var|let|const) ([\d\w]+)\s*=\s*require\((.+)\)\.([^;]+);?$/;
 
-const EXPORT_RE = /module.exports\s*=\s*(.*)/;
+const EXPORT_RE = /^module.exports\s*=\s*(.*)/;
 
 // TODO: there are valid js identifiers that use more than just ASCII here
 const PROPERTY_RE = /^[\d\w]+$/;
