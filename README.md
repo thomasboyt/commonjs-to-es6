@@ -1,6 +1,10 @@
 Uber-naive CommonJS->ES6 converter. **Will break on multi-line import/export declarations.** Works by string replacement, regexes, and hope.
 
-Handles use cases:
+### Usage
+
+This *rewrites files in place*, so back up your files/commit them before continuing.
+
+### Supported syntax
 
 <table>
   <tr>

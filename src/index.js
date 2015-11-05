@@ -36,7 +36,7 @@ function transformExport(ctx, match) {
   return `export default ${predicate}`;
 }
 
-function main() {
+export function cli() {
   const args = process.argv.slice(2);
 
   for (const file of args) {
@@ -60,9 +60,4 @@ function main() {
 
     writeFileSync(file, output, {encoding: 'utf8'});
   }
-}
-
-// equivalent to `if __name__ == "__main__":` in python
-if (require.main === module) {
-  main();
 }
